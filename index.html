@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Map Restaurants</title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="resources/css/customized.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <div id="layer">
+            <div class="headers-section">
+                <b><h5>Restaurant Type</h5></b>
+            </div>
+            <div class="section-cont">
+                <b>Available restaurant type:</b>
+                <select id="types">
+                    <option value="restaurant">All</option>
+                    <option value="cafe">Cafe</option>
+                    <option value="bar">Resto Bar</option>
+                    <!-- <option value="food">Foods</option> // deprecated-->
+                    <option value="casual dining">Casual Dining</option>
+                    <option value="fine dining">Fine Dining</option>
+                    <option value="bakeshop">Bakery/Bakeshop</option>
+                </select>
+            </div>
+            <div class="headers-section">
+                <b><h5>Current Place Summarry</h5></b>
+            </div>
+            <div class="body-cont">
+                <p class="overflow-cont">
+                    <b style="font-size:12pt;">Restaurants:</b><br><span id="restaurants_list"></span>
+                </p>
+            </div>
+            <div class="headers-section">
+                <b><h5>DIRECTION ROUTES</h5></b>
+            </div>
+            <div class="body-cont">
+                <p id="waze" class="overflow-cont m0" style="font-size:11pt;">Please select your destination.</p>
+            </div>
+        </div>
+        <div id="map"></div>
+    </body>
+</html>
+<script src="resources/js/jquery.min.js"></script>
+<script src="resources/js/customized.js"></script>
+<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoi-pmZeN1lmVnBspppsLjF7_VbFTmr84&callback=initMap&libraries=places"
+  async defer></script>
